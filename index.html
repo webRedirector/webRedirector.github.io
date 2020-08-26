@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirector</title>
+</head>
+<body>
+    <form method="dialog" onsubmit="result()">
+        <p>
+            Enter your webpage URL...
+        <input onInput="change()" type="url" id="url" name="url" value="" required>
+         </p>
+        <p>
+            Enter your website's home URL:
+        <input onInput="change()" type="url" id="homeurl" name="homeurl" value="" required>
+        </p>
+        <p>
+            Select protocol: 
+        <select onInput="change()" id="protocol" name="protocol" required>
+            <optgroup label="Select protocol">
+            <option>https://</option>
+            <option>http://</option>
+            </optgroup>
+        </select>
+        </p>
+        <input type="submit"><input onclick="document.getElementById('result').style.display = 'none';" type="reset">
+    </form>
+    <p id="result" style="display: none;">
+        <strong>
+            Your link is: <a href="" target="_blank" id="finalLink"></a>
+        </strong>
+    </p>
+    <script src="index.js"></script>
+</body>
+</html>
