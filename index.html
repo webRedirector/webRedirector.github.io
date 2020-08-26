@@ -31,6 +31,21 @@
             Your link is: <a href="" target="_blank" id="finalLink"></a>
         </strong>
     </p>
-    <script src="index.js"></script>
+    <script>
+        var url, homeurl, protocol, fulurl;
+
+function change() {
+    url = document.getElementById('url').value;
+    homeurl = document.getElementById('homeurl').value;
+    protocol = document.getElementById('protocol').value;
+    fulurl = 'https://webredirector.github.io/relink?url=' + url + '&homeurl=' + homeurl + '&protocol=' + protocol;
+}
+
+function result() {
+    document.getElementById('finalLink').href = fulurl;
+    document.getElementById('finalLink').innerHTML = fulurl;
+    document.getElementById('result').style.display = 'unset';
+}
+    </script>
 </body>
 </html>
