@@ -4,7 +4,7 @@ function change() {
     url = document.getElementById('url').value;
     homeurl = document.getElementById('homeurl').value;
     protocol = document.getElementById('protocol').value;
-    fulurl = 'relink.html?url=' + url + '&homeurl=' + homeurl + '&protocol=' + protocol;
+    fulurl = 'https://webredirector.github.io/relink?url=' + url + '&homeurl=' + homeurl + '&protocol=' + protocol;
 }
 
 function result() {
